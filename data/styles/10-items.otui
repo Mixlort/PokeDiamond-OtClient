@@ -1,0 +1,65 @@
+Item < UIItem
+  size: 34 34
+  padding: 1
+  image-source: /images/ui/item
+  opacity: 0.9
+  font: lucida-11px-rounded
+  border-color: white
+  color: white
+
+  $disabled:
+    color: #646464
+  $hover:
+    opacity: 1.0
+ProfissionItemIvi < UIItem
+  size: 30 30
+  padding: 0
+  image-source: ~
+  opacity: 0.9
+  font: lucida-11px-rounded
+  border-color: white
+  color: white
+
+  $disabled:
+    color: #646464
+  $hover:
+    opacity: 1.0
+
+WaloxItem < UIItem
+  size: 34 34
+  padding: 1
+  image-source: /images/ui/waloxitem
+  opacity: 0.9
+  font: lucida-11px-rounded
+  border-color: white
+  color: white
+
+  $disabled:
+    color: #646464
+  $hover:
+    opacity: 1.0
+
+Item2 < UIItem
+  size: 20 20
+  padding: 1
+  image-source: /images/ui/item
+  opacity: 0.9
+  font: lucida-11px-rounded
+  border-color: white
+  color: white
+
+  $disabled:
+    color: #646464
+  $hover:
+    opacity: 1.0
+
+ItemHideCount < UIItem
+  hide-count: true
+  color: white
+
+UIItemVirtual < UIItem
+  size: 34 34
+  border-color: alpha
+  &itemVirtual: true
+  focusable: false
+  phantom: true

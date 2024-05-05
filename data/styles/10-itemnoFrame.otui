@@ -1,0 +1,10 @@
+
+ItemnoFrame < UIItem
+  size: 34 34
+  padding: 1
+  font: verdana-11px-rounded
+  border-color: white
+  color: white
+
+  $disabled:
+    color: #646464

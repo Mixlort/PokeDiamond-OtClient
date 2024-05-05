@@ -1,0 +1,8 @@
+Module
+  name: game_creatures
+  description: Manager game creatures
+  author: Gengo
+  sandboxed: true
+  scripts: [creatures]
+  @onLoad: init()
+  @onUnload: terminate()

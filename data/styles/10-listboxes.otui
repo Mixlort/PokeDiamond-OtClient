@@ -1,0 +1,21 @@
+TextList < UIScrollArea
+  layout: verticalBox
+  image-source: /images/ui/panel_flat
+  image-border: 2
+  image-border-top: 3
+  image-border-bottom: 3
+  padding: 1
+  padding: 1
+  auto-focus: none
+
+HorizontalList < UIScrollArea
+  layout: horizontalBox
+  border-width: 1
+  border-color: #272727
+  background-color: #636363
+
+VerticalList < UIScrollArea
+  layout: verticalBox
+  border-width: 1
+  border-color: #272727
+  background-color: #636363

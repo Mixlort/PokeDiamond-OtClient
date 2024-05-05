@@ -1,0 +1,90 @@
+Label < UILabel
+  font: verdana-11px-antialised
+  color: #dfdfdf
+
+  $disabled:
+    color: #dfdfdf88
+
+FlatLabel < UILabel
+  font: verdana-11px-antialised
+  color: #dfdfdf
+  size: 86 20
+  text-offset: 3 3
+  image-source: /images/ui/panel_flat
+  image-border: 1
+
+  $disabled:
+    color: #dfdfdf88
+
+MenuLabel < Label
+
+GameLabel < UILabel
+  font: verdana-11px-antialised
+  color: #dfdfdf
+
+HoverLabel < UILabel
+  font: lucida-11px-rounded
+  color: #dfdfdf
+  width: 236
+  phantom: true
+  anchors.top: parent.top
+  anchors.horizontalCenter: parent.horizontalCenter
+  text-vertical-auto-resize: true
+  text-align: left
+  text-wrap: true
+  $!first:
+    anchors.top: prev.bottom
+    margin-top: 3
+
+HoverUseTipLabel < UILabel
+  font: lucida-11px-rounded
+  color: #ffee9b
+  width: 236
+  phantom: true
+  anchors.top: parent.top
+  anchors.horizontalCenter: parent.horizontalCenter
+  text-vertical-auto-resize: true
+  text-align: right
+  text-wrap: true
+  $!first:
+    anchors.top: prev.bottom
+    margin-top: 3
+
+HoverNPCTipLabel < UILabel
+  font: lucida-11px-rounded
+  color: #9bcbff
+  width: 236
+  phantom: true
+  anchors.top: parent.top
+  anchors.horizontalCenter: parent.horizontalCenter
+  text-vertical-auto-resize: true
+  text-align: right
+  text-wrap: true
+  $!first:
+    anchors.top: prev.bottom
+    margin-top: 3
+
+HoldingLabel < UILabel
+  font: lucida-11px-rounded
+  color: #dfdfdf
+  width: 188
+  phantom: true
+  text-align: left
+  text-wrap: true
+
+HoverMoneyLabel < UILabel
+  font: lucida-11px-rounded
+  color: #F2F24E
+  height: 16
+  phantom: true
+  text-horizontal-auto-resize: true
+  text-align: right
+  text-wrap: true
+
+HoverNameLabel < UILabel
+  font: lucida-11px-rounded
+  color: #dfdfdf
+  width: 30
+  height: 16
+  phantom: true
+  text-align: center

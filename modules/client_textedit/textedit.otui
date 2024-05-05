@@ -1,0 +1,88 @@
+TextEditButtons < Panel
+  id: buttons
+  height: 30
+
+  Button
+    id: ok
+    !text: tr('Ok')
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-right: 63
+    width: 120
+
+  Button
+    id: cancel
+    !text: tr('Cancel')
+    anchors.bottom: parent.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-left: 63
+    width: 120
+
+TextEditWindow < MainWindow
+  id: textedit
+  !text: tr("Edit Text")
+  anchors.centerIn: parent
+  @onEscape: self:destroy()
+    
+  Label
+    id: description
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text-align: center
+    visible: false
+    text-wrap: true
+    text-auto-resize: true
+
+SinglelineTextEditWindow < TextEditWindow
+  size: 280 138
+  anchors.centerIn: parent
+
+  TextEdit
+    id: text
+    anchors.top: description.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 5 8 0 8
+
+  HorizontalSeparator
+    id: separator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: next.top
+    margin-bottom: 5
+
+  TextEditButtons
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-bottom: 5
+
+MultilineTextEditWindow < TextEditWindow
+  width: 600
+  $mobile:
+    width: 500
+
+  Panel
+    id: textPanel
+    height: 400
+    $mobile:
+      height: 300
+
+    MultilineTextEdit
+      id: text
+      anchors.fill: parent
+      margin-right: 12
+      text-wrap: true
+      vertical-scrollbar: textScroll
+
+    VerticalScrollBar
+      id: textScroll
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      anchors.right: parent.right
+      pixels-scroll: true
+      step: 10
+    
+  TextEditButtons
+

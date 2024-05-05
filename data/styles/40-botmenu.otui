@@ -1,0 +1,39 @@
+BotMenuPanel < Panel
+  size: 401 57
+  image-source: /images/botbuttons/buttonsBar
+  image-border: 4
+  focusable: false
+
+BotButton < UIButton
+  size: 46 45
+  opacity: 0.75
+  anchors.verticalCenter: parent.verticalCenter
+  anchors.right: parent.right
+  margin-right: 6
+  $!first:
+    anchors.right: prev.left
+    margin-right: 4
+  $on:
+    opacity: 1.0
+  @onClick: self:setOpacity(0.5)
+
+SmallBotButton < UIButton
+  size: 34 33
+  opacity: 0.75
+  anchors.verticalCenter: parent.verticalCenter
+  anchors.right: parent.right
+  margin-right: 5
+  $!first:
+    anchors.right: prev.left
+    margin-right: 3
+  $on:
+    opacity: 1.0
+  @onClick: self:setOpacity(0.5)
+    
+
+BotMenuFrameCounterLabel < Label
+  font: lucida-11px-rounded
+  color: white
+
+BotMenuPingLabel < Label
+  font: lucida-11px-rounded

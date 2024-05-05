@@ -1,0 +1,166 @@
+CheckBox < UICheckBox
+  size: 17 17
+  text-align: left
+  text-offset: 18 1
+  color: #aaaaaa
+  image-color: #ffffffff
+  image-rect: 0 0 17 17
+  image-source: /images/ui/checkbox
+
+  $hover !disabled:
+    color: #cccccc
+
+  $!checked:
+    image-clip: 0 0 17 17
+
+  $hover !checked:
+    image-clip: 0 17 17 17
+
+  $checked:
+    image-clip: 0 34 17 17
+
+  $hover checked:
+    image-clip: 0 51 17 17
+
+  $disabled:
+    image-color: #ffffff88
+    color: #aaaaaa88
+
+RememberBox < UICheckBox
+  size: 141 19
+  text-align: left
+  text-offset: 18 1
+  color: #aaaaaa
+  image-color: #ffffffff
+  image-rect: 0 0 141 19
+  image-source: /images/ui/RememberBox
+
+  $hover !disabled:
+    color: #cccccc
+
+  $!checked:
+    image-clip: 0 0 141 19
+
+  $hover !checked:
+    image-clip: 0 19 141 19
+
+  $checked:
+    image-clip: 0 38 141 19
+
+  $hover checked:
+    image-clip: 0 57 141 19
+
+  $disabled:
+    image-color: #ffffff88
+    color: #aaaaaa88
+
+RegrasBox < UICheckBox
+  size: 97 19
+  text-align: left
+  text-offset: 18 1
+  color: #aaaaaa
+  image-color: #ffffffff
+  image-rect: 0 0 97 19
+  image-source: /images/ui/regras_checkbox
+
+  $hover !disabled:
+    color: #cccccc
+
+  $!checked:
+    image-clip: 0 0 97 19
+
+  $hover !checked:
+    image-clip: 0 19 97 19
+
+  $checked:
+    image-clip: 0 38 97 19
+
+  $hover checked:
+    image-clip: 0 57 97 19
+
+  $disabled:
+    image-color: #ffffff88
+    color: #aaaaaa88
+
+WhiteCheckBox < UICheckBox
+  size: 19 19
+  text-align: left
+  text-offset: 18 1
+  color: #aaaaaa
+  image-color: #ffffffff
+  image-rect: 0 0 19 19
+  image-source: /images/ui/White_Checkbox
+
+  $hover !disabled:
+    color: #cccccc
+
+  $!checked:
+    image-clip: 0 0 19 19
+
+  $hover !checked:
+    image-clip: 0 19 19 19
+
+  $checked:
+    image-clip: 0 38 19 19
+
+  $hover checked:
+    image-clip: 0 57 19 19
+
+  $disabled:
+    image-color: #ffffff88
+    color: #aaaaaa88
+
+ColorBox < UICheckBox
+  size: 16 16
+  image-color: #dfdfdfff
+  image-source: /images/ui/colorbox
+
+  $checked:
+    image-clip: 16 0 16 16
+
+  $!checked:
+    image-clip: 0 0 16 16
+
+ButtonBox < UICheckBox
+  font: verdana-11px-antialised
+  color: #93d8a6
+  size: 106 20
+  text-align: center
+  text-offset: 0 0
+  image-source: /images/ui/button
+  image-color: white
+  image-clip: 0 0 20 20
+  image-border: 4
+  padding: 5 10 5 10
+
+  $hover !disabled:
+    image-clip: 0 20 20 20
+
+  $pressed:
+    image-clip: 0 40 20 20
+    text-offset: 1 1
+
+  $disabled:
+    color: #808080
+
+OutfitButton < UICheckBox
+  size: 44 38
+  text-align: center
+  image-source: /images/game/Module/outfit/noting
+  image-clip: 0 0 44 38
+  opacity: 0.8
+
+  $hover !disabled:
+    image-clip: 0 0 44 38
+    opacity: 100
+
+  $pressed:
+    image-clip: 0 0 44 38
+    opacity: 0.7
+
+  $disabled:
+    color: #808080
+    opacity: 0.4
+
+ButtonBoxRounded < ButtonBox
+  image-source: /images/ui/button_rounded

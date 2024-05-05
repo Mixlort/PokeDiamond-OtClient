@@ -1,0 +1,130 @@
+SlotProgressBar < UIProgressBar
+  background-color: #5fda4c
+  image-source: /images/game/pokebar/progressbar
+  phantom: true
+
+SlotBar < UIWidget
+  id: PokemonBar
+  size: 173 46
+  anchors.left: parent.left
+  anchors.right: parent.right
+  draggable: true
+  &dragLeave: 0
+  opacity: 1
+  focusable: false
+
+  $hover:
+    opacity: 0.9
+
+  $pressed:
+    opacity: 1
+
+  $first:
+    anchors.top: parent.top
+
+  $!first:
+    anchors.top: prev.bottom
+    margin-top: 2
+
+  UIWidget
+    size: 32 32
+    id: fundoColor
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin: 7 0 0 7
+    background-color: #727272
+    phantom: true
+    focusable: false
+
+  UICreature
+    size: 25 25
+    id: portrait
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 11
+    margin-left: 10
+    phantom: true
+    fixed-creature-size: true
+    old-scaling: true
+    focusable: false
+
+  UIWidget
+    id: background
+    size: 173 46
+    anchors.fill: parent
+    image-source: /images/game/pokebar/slotbar
+    image-clip: 0 46 173 46
+    phantom: true
+    checked: false
+    focusable: false
+
+    $on !$checked:
+      image-clip: 0 0 173 46
+
+    $disabled:
+      image-clip: 0 92 173 46
+
+    $checked:
+      size: 46 46
+      image-clip: 0 46 46 46
+      image-source: /images/game/pokebar/compact
+
+    $checked on:
+      image-clip: 0 0 46 46
+
+    $checked disabled:
+      image-clip: 0 92 46 46
+
+  Label
+    id: name
+    anchors.top: parent.top
+    anchors.left: portrait.right
+    anchors.right: parent.right
+    margin: 5 0 0 8
+    text-auto-resize: true
+    focusable: false
+
+  SlotProgressBar
+    id: progress
+    size: 110 16
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 4
+    margin-left: 4
+    focusable: false
+
+  Label
+    id: health
+    anchors.top: prev.top
+    anchors.horizontalCenter: prev.horizontalCenter
+    margin-top: 3
+    text-auto-resize: true
+    focusable: false
+
+  UIWidget
+    id: gender
+    anchors.bottom: parent.bottom
+    anchors.right: portrait.right
+    margin: 0 -3 4 0
+    focusable: false
+
+  UIWidget
+    size: 32 32
+    id: useRevivePokemon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin: 7 0 0 7
+    background-color: #727272
+    opacity: 0
+    focusable: false
+
+UIWindow
+  height: 46
+  width: 173
+  anchors.top: parent.top
+  anchors.left: parent.left
+  padding: 3
+  focusable: false
+
+  $on:
+    width: 50

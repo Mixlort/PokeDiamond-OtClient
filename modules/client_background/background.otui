@@ -1,0 +1,42 @@
+Panel
+  id: background
+  image-source: /images/background
+  image-smooth: true
+  image-fixed-ratio: true
+  anchors.top: topMenu.bottom
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  margin-top: 1
+  focusable: false
+
+  UIButton
+    id: config
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 10
+    margin-left: 10
+    size: 53 49
+    opacity: 0.5
+    image-source: config
+    image-clip: 0 0 53 49
+    @onClick: modules.client_options.show()
+    $hover:
+      size: 53 49
+      opacity: 1.0
+    $pressed:
+      size: 53 49
+      opacity: 0.9
+    
+  UILabel
+    id: clientVersionLabel
+    background-color: #00000099
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    text-align: center
+    text-auto-resize: true
+    width: 120
+    padding: 2
+    color: #ffffff
+    font: lucida-11px-rounded

@@ -1,0 +1,46 @@
+UIWindow
+  id: optionsWindow
+  size: 422 46
+  focusable: false
+  anchors.horizontalCenter: parent.horizontalCenter
+  anchors.bottom: parent.bottom
+  margin-bottom: 38
+  &save: true
+  opacity: 1.0
+
+  Panel
+    id: cdbarShape
+    size: 422 46
+    anchors.centerIn: parent
+    phantom: true
+    focusable: false
+    image-source: /images/game/playerInfo/cdbar/h12
+
+SpellIcon < Button
+  width: 32
+  height: 32
+  image-size: 32 32
+  image-clip: 0 0 0 0
+  image-color: white
+  focusable: false
+  anchors.top: parent.top
+  anchors.left: parent.left
+  opacity: 0.9
+  Label
+    id: text
+    color: #FFFFFF
+    font: lucida-11px-rounded
+    size: 28 10
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-bottom: -3
+    text-align: center
+    text-wrap: true
+    phantom: true
+
+SpellProgress < UIProgressRect
+  background: #F3161690
+  color: #FFFFFF
+  font: lucida-11px-rounded
+  percent: 100
+  focusable: false

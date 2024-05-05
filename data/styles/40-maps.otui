@@ -1,0 +1,57 @@
+HoverMapItem < UIItem
+  size: 32 32
+  color: white
+
+HoverMap < UIWidget
+  size: 94 94
+  HoverMapItem
+    id: 1
+    anchors.top: parent.top
+    anchors.left: parent.left
+  HoverMapItem
+    id: 2
+    anchors.top: prev.top
+    anchors.left: prev.right
+  HoverMapItem
+    id: 3
+    anchors.top: prev.top
+    anchors.left: prev.right
+  HoverMapItem
+    id: 4
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+  HoverMapItem
+    id: 5
+    anchors.top: prev.top
+    anchors.left: prev.right
+  HoverMapItem
+    id: 6
+    anchors.top: prev.top
+    anchors.left: prev.right
+  HoverMapItem
+    id: 7
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+  HoverMapItem
+    id: 8
+    anchors.top: prev.top
+    anchors.left: prev.right
+  HoverMapItem
+    id: 9
+    anchors.top: prev.top
+    anchors.left: prev.right
+  UIWidget
+    size: 98 98
+    image-source: /images/ui/evoMapBorder
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: -2
+    margin-left: -2
+  UICreature
+    id: creature
+    size: 96 96
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    fixed-creature-size: true
+    margin-bottom: 30
+    margin-right: 30

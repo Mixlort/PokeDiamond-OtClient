@@ -1,0 +1,170 @@
+RewardsNPCWindow < UIScrollArea
+  id: PanelSelections
+  size: 410 32
+  phantom: true
+  layout:
+    type: horizontalBox
+    spacing: 8
+    cell-size: 32 32
+
+DefeatPokesNpcWindow < UIScrollArea
+  id: PanelSelections
+  size: 410 30
+  phantom: true
+  layout:
+    type: horizontalBox
+    spacing: 20
+    cell-size: 32 32
+
+RewardNPCItem < UIItem
+  size: 32 32
+  image-source: /images/ui/item
+  border-color: white
+  color: white
+  UILabel
+    id: count
+    font: lucida-11px-rounded
+    text-auto-resize: true
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: -5
+    margin-bottom: -1
+
+DefeatPokesByNpc < UIWidget
+  size: 45 45
+  UICreature
+    id: creature
+    size: 26 26
+    anchors.centerIn: parent
+    margin-top: 3
+    fixed-creature-size: true
+    animate: true
+    phantom: true
+    old-scaling: true
+    focusable: false
+  UILabel
+    id: count
+    phantom: true
+    font: lucida-11px-rounded
+    text-auto-resize: true
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: -20
+    margin-bottom: 5
+
+StarterNpc < UIWidget
+  size: 60 35
+  UICreature
+    id: creature
+    size: 26 26
+    anchors.centerIn: parent
+    margin-left: -5
+    margin-top: 3
+    fixed-creature-size: true
+    animate: true
+    phantom: true
+    old-scaling: true
+    focusable: false
+  UILabel
+    id: count
+    phantom: true
+    font: lucida-11px-rounded
+    text-auto-resize: true
+    anchors.bottom: parent.bottom
+    anchors.left: creature.right
+    margin-left: 10
+    margin-bottom: 6
+
+ItemSelector < UIWidget
+  size: 45 45
+  UIItem
+    id: item
+    size: 32 32
+    anchors.centerIn: parent
+    margin-right: 1
+    margin-bottom: 6
+    phantom: true
+    // image-source: /images/ui/item
+    border-color: white
+    color: white
+  UILabel
+    id: name
+    font: lucida-11px-rounded
+    text-auto-resize: true
+    anchors.bottom: prev.bottom
+    anchors.left: prev.right
+    margin-left: 5
+    margin-bottom: 10
+
+SelectionsWindow < UIWidget
+  size: 222 19
+  image-source: /modules/game_npcdialog/images/1
+  text-align: left
+  font: lucida-11px-rounded
+  text-offset: 15 0
+  image-border-left: 190
+  image-border-right: 30
+  image-border-top: 9
+  image-border-bottom: 9
+  change-cursor-image: true
+  cursor: pointer
+  $!checked:
+    image-source: /modules/game_npcdialog/images/1
+  $hover !checked:
+    image-source: /modules/game_npcdialog/images/2
+  $checked:
+    image-source: /modules/game_npcdialog/images/3
+  $hover checked:
+    image-source: /modules/game_npcdialog/images/3
+  $focus:
+    image-source: /modules/game_npcdialog/images/3
+  $disabled:
+    change-cursor-image: false
+
+NpcDialogName < UIWidget
+  id: NpcName
+  font: lucida-11px-rounded
+  text-align: left
+  text-auto-resize: true
+  anchors.top: baseOutfit.top
+  anchors.left: baseOutfit.right
+  margin-top: 12
+  margin-left: -15
+
+DialogText < UIWidget
+  id: DialogTexts
+  font: lucida-11px-rounded
+  color: #ffffff
+  text-wrap: true
+  text-align: topLeft
+
+NpcOutfitBase < UIWidget
+  id: baseOutfit
+  size: 96 96
+  phantom: true
+  anchors.top: parent.top
+  anchors.left: parent.left
+  UIWidget
+    id: base
+    size: 32 32
+    image-source: /modules/game_npcdialog/images/base_ball
+    anchors.bottom: NpcOutfit.bottom
+    anchors.right: NpcOutfit.right
+    margin-right: -8
+    margin-bottom: -9
+  UICreature
+    id: NpcOutfit
+    size: 36 36
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 25
+    margin-left: 25
+    phantom: true
+    old-scaling: true
+  UIWidget
+    id: image
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 20
+    margin-left: 20
+    phantom: true
